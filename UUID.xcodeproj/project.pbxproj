@@ -15,6 +15,7 @@
 		BB1495A31BADA6D4006B3043 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB1495A11BADA6D4006B3043 /* LaunchScreen.storyboard */; };
 		BB1495AE1BADA6D4006B3043 /* UUIDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1495AD1BADA6D4006B3043 /* UUIDTests.m */; };
 		BB1495B91BADA6D4006B3043 /* UUIDUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1495B81BADA6D4006B3043 /* UUIDUITests.m */; };
+		BB1495CB1BADA754006B3043 /* DevicesUuid.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1495CA1BADA754006B3043 /* DevicesUuid.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		BB1495B41BADA6D4006B3043 /* UUIDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UUIDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB1495B81BADA6D4006B3043 /* UUIDUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUIDUITests.m; sourceTree = "<group>"; };
 		BB1495BA1BADA6D4006B3043 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB1495C91BADA754006B3043 /* DevicesUuid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DevicesUuid.h; sourceTree = "<group>"; };
+		BB1495CA1BADA754006B3043 /* DevicesUuid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DevicesUuid.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +104,7 @@
 		BB1495921BADA6D4006B3043 /* UUID */ = {
 			isa = PBXGroup;
 			children = (
-				BB1495961BADA6D4006B3043 /* AppDelegate.h */,
-				BB1495971BADA6D4006B3043 /* AppDelegate.m */,
-				BB1495991BADA6D4006B3043 /* ViewController.h */,
-				BB14959A1BADA6D4006B3043 /* ViewController.m */,
+				BB1495C61BADA6E1006B3043 /* Class */,
 				BB14959C1BADA6D4006B3043 /* Main.storyboard */,
 				BB14959F1BADA6D4006B3043 /* Assets.xcassets */,
 				BB1495A11BADA6D4006B3043 /* LaunchScreen.storyboard */,
@@ -138,6 +138,35 @@
 				BB1495BA1BADA6D4006B3043 /* Info.plist */,
 			);
 			path = UUIDUITests;
+			sourceTree = "<group>";
+		};
+		BB1495C61BADA6E1006B3043 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				BB1495C81BADA6F1006B3043 /* Sources */,
+				BB1495C71BADA6EB006B3043 /* Main */,
+			);
+			name = Class;
+			sourceTree = "<group>";
+		};
+		BB1495C71BADA6EB006B3043 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				BB1495961BADA6D4006B3043 /* AppDelegate.h */,
+				BB1495971BADA6D4006B3043 /* AppDelegate.m */,
+				BB1495991BADA6D4006B3043 /* ViewController.h */,
+				BB14959A1BADA6D4006B3043 /* ViewController.m */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		BB1495C81BADA6F1006B3043 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				BB1495C91BADA754006B3043 /* DevicesUuid.h */,
+				BB1495CA1BADA754006B3043 /* DevicesUuid.m */,
+			);
+			name = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +301,7 @@
 			files = (
 				BB14959B1BADA6D4006B3043 /* ViewController.m in Sources */,
 				BB1495981BADA6D4006B3043 /* AppDelegate.m in Sources */,
+				BB1495CB1BADA754006B3043 /* DevicesUuid.m in Sources */,
 				BB1495951BADA6D4006B3043 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,9 +444,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = UUID/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wt.UUID;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -425,9 +457,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = UUID/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wt.UUID;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

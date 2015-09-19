@@ -10,4 +10,9 @@
 
 @interface DevicesUuid : NSObject
 
++ (void)addDevicesUuid:(NSString *)devicesId;
++ (void)removeDevicesUuid;
++ (NSString *)fetchDevicesUuid;
+
+
 @end
